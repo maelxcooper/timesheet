@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="css/timesheet.css" rel="stylesheet">
+<title>Timesheet</title>
+</head>
+<body>
+<div class="wrap">
+  <div class="top card"><h1>Timesheet</h1><span class="mut">Latest 50 entries, grouped by date</span><button id="exp" type="button">⬇ Export CSV</button></div>
+
+  <div class="card">
+    <div class="row add">
+      <input id="desc" placeholder="What have you worked on?">
+      <input id="proj" list="projs" placeholder="Project">
+      <div class="times"><input id="st" inputmode="numeric" maxlength="5" placeholder="15:00" autocomplete="off"><span>–</span><input id="en" inputmode="numeric" maxlength="5" placeholder="15:15" autocomplete="off"></div>
+      <span class="cal"><button id="calbtn" type="button" title="Date">📅</button><input type="date" id="edate" tabindex="-1"></span>
+      <div class="dur" id="pdur">0:00</div>
+      <button class="p" id="add" title="Add">+</button>
+    </div>
+    <datalist id="projs"></datalist>
+    <div id="list"></div>
+    <div class="mut" id="more"></div>
+  </div>
+  <div class="mut">Entries are saved in this browser only.</div>
+</div>
+
+
+<script src="js/clockify.js"></script>
+</body>
+</html>
